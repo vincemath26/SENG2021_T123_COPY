@@ -1,0 +1,187 @@
+/* --- All Settings --- */
+
+.settingsForm {
+	top: 80px;
+	left: 280px;
+	position: fixed;
+	font-family: Helvetica, sans-serif;
+	z-index: 10;
+}
+
+.resetButton {
+	background-color: #f0f0f0;
+	color: var(--brand-col);
+	margin-left: 0;
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	transition: background 0.8s;
+}
+
+.resetButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+	color: #FFF;
+}
+
+.resetButton:active {
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.saveButton {
+	background-color: var(--brand-col);
+	color: #FFF;
+	margin-left: 10px;
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	transition: all 0.8s;
+}
+
+.saveButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+}
+
+.saveButton:active {
+	background-size: 100%;
+	transition: all 0s;
+}
+
+.space {
+	margin: 60px auto;
+}
+
+/* --- Account Settings Page --- */
+
+.accountSettings {
+	top: 120px;
+	left: 240px;
+	position: fixed;
+	color: #000000;
+	z-index: 10;
+}
+
+.accountSettings td {
+	padding: 20px 30px;
+	font-family: Helvetica, sans-serif;
+}
+
+.passwordButton {
+	background-color: #f0f0f0;
+	color: var(--brand-col);
+	margin-left: 10px;
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	transition: background 0.8s;
+}
+
+.passwordButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+	color: #FFF;
+}
+
+.passwordButton:active {
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.modalSecondButton {
+	background-color: #f0f0f0;
+	color: var(--brand-col);
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	transition: background 0.8s;
+}
+
+.modalSecondButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+	color: #FFF;
+}
+
+.modalSecondButton:active {
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.modalPrimaryButton {
+	background-color: var(--brand-col);
+	color: #FFF;
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	transition: all 0.8s;
+}
+
+.modalPrimaryButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+}
+
+.modalPrimaryButton:active {
+	background-size: 100%;
+	transition: all 0s;
+}
+
+/* --- Theme Settings Page --- */
+
+.themeCheck {
+	margin: 25px 100px 25px 20px;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+}
+
+.settingsForm h5 {
+	margin-top: 40px;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+#themeCheck1:focus,
+#themeCheck2:focus,
+#themeCheck3:focus,
+#themeCheck4:focus,
+#themeCheck5:focus,
+#themeCheck6:focus {
+	border-color: #ccc;
+	box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem var(--brand-anim-col);
+}
+
+#themeCheck1:checked,
+#themeCheck2:checked,
+#themeCheck3:checked,
+#themeCheck4:checked,
+#themeCheck5:checked,
+#themeCheck6:checked {
+	background-color: var(--brand-col);
+	border-color: #ccc;
+}
+
+/* --- Accessibility Settings Page --- */
+
+.accessCheck {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+.settingsForm p {
+	color: #000000;
+}
+
+#borderSwitch:focus,
+#textureSwitch:focus,
+#altTextSwitch:focus {
+	border-color: #ccc;
+	box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem var(--brand-anim-col);
+}
+
+#borderSwitch:checked,
+#textureSwitch:checked,
+#altTextSwitch:checked {
+	background-color: var(--brand-col);
+	border-color: var(--brand-col);
+}

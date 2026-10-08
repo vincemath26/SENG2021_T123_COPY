@@ -1,0 +1,38 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Generate deployment package
+        run: zip -r deploy.zip "build" "package.json" "package-lock.json" "Procfile"
+
+      - name: Deploy API to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: h10a-brownie
+          environment_name: h10a-brownie-dev
+          use_existing_version_if_available: true
+          version_label: ${{ github.SHA }}
+          version_description: ${{ github.event.head_commit.message }}
+          region: ap-southeast-2
+          deployment_package: deploy.zip

@@ -1,0 +1,90 @@
+name: Brownie CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Job to run lint checks
+  lint_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository and setup node
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint checks
+        run: npm run lint
+
+  # Job to run typescript checks
+  typescript_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run typecheck
+        run: npm run typecheck
+
+  # Job to run jest tests with coverage
+  tests:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run dbPool.ts script on PostgreSQL database
+        run: |
+          npx ts-node src/dbPool.ts &
+          sleep 10
+
+      - name: Run jest tests with coverage
+        run: |
+          sudo npm run ts-node-coverage &
+          sleep 10
+          sudo npx nyc npx jest -ci --updateSnapshot --coverage
+          sleep 10
+          kill $!
+          ls ${{ github.workspace }}
+
+      - name: Archive testing artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: ${{ github.workspace }}/coverage/**/*
+
+
+
+       

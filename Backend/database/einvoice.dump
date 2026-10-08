@@ -1,0 +1,16 @@
+CREATE TABLE users (
+    id          serial primary key,
+    email       text not null unique,
+    name        text not null,
+    password    text not null
+);
+
+CREATE TABLE eInvoices (
+    id          serial primary key,
+    invoicer    integer not null,
+    invoicee    integer not null,
+    invoice     text not null,
+    created     date,
+    foreign key (invoicer) references users(id),
+    foreign key (invoicee) references users(id)
+);

@@ -1,0 +1,260 @@
+/* --- Background and Interface --- */
+
+.createBackground {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -10;
+	background-color: var(--background-main);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.createInterface {
+	width: 36%;
+	height: 60%;
+	position: fixed;
+	z-index: -5;
+	left: 32%;
+	top: 20%;
+	background-color: var(--background-frame);
+	border-radius: 30px;
+	border: none;
+}
+
+.logo {
+	position: fixed;
+	z-index: 1;
+	top: 21.5%;
+	left: 61%;
+}
+
+/* --- Page Title and Text Boxes --- */
+
+#loginTitle {
+	font-size: 36px;
+	font-family: Helvetica, sans-serif;
+	color: var(--brand-col);
+	text-align: center;
+	font-weight: normal;
+	left: 47%;
+	top: 27%;
+	position: fixed;
+	z-index: 5;
+}
+
+#registerTitle {
+	font-size: 36px;
+	font-family: Helvetica, sans-serif;
+	color: var(--brand-col);
+	text-align: center;
+	font-weight: normal;
+	left: 45%;
+	top: 24%;
+	position: fixed;
+	z-index: 5;
+}
+
+#resetTitle {
+	font-size: 36px;
+	font-family: Helvetica, sans-serif;
+	color: var(--brand-col);
+	text-align: center;
+	font-weight: normal;
+	left: 40%;
+	top: 31.5%;
+	position: fixed;
+	z-index: 5;
+}
+
+.form {
+	background-color: transparent;
+	width: 28%;
+	height: 40%;
+	position: fixed;
+	z-index: -5;
+	left: 36.5%;
+	display: inline-block;
+	text-align: left;
+	padding: 1em;
+}
+
+#loginForm {
+	top: 28%;
+}
+
+#registerForm {
+	top: 25%;
+}
+
+#requestForm {
+	top: 44%;
+}
+
+#resetForm {
+	top: 33%;
+}
+
+#p {
+	color: #CCC;
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: center;
+	width: 20%;
+	position: fixed;
+	z-index: 5;
+	left: 40%;
+	top: 40%;
+}
+
+.label {
+	font-size: x-large;
+	text-emphasis: bold;
+	color: var(--text-col-main);
+}
+
+.textInput {
+	position: fixed;
+	background-color: var(--input-col-bg);
+	color: var(--input-col-fg);
+	width: 25%;
+	padding: 12px 20px;
+	margin: 10px 0;
+	display: inline-block;
+	border: none;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+/* --- Navigation Buttons --- */
+
+.resetButton {
+	position: fixed;
+	z-index: 10;
+	top: 51%;
+	left: 45%;
+}
+
+.resetButton button {
+	background-color: transparent;
+	color: var(--brand-col);
+	border-radius: 10px;
+	border: none;
+	font-size: 15px;
+	margin: 0px 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.resetButton button:hover {
+	background: #CCC radial-gradient(circle, transparent 1%, #CCC 1%) center/15000%;
+}
+
+.resetButton button:active {
+	background-color: #FFF;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.switchPageButton {
+	position: fixed;
+	z-index: 10;
+}
+
+.switchPageButton button {
+	background-color: transparent;
+	color: var(--brand-col);
+	border-radius: 10px;
+	border: none;
+	font-size: 15px;
+	margin: 0px 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.switchPageButton button:hover {
+	background: #CCC radial-gradient(circle, transparent 1%, #CCC 1%) center/15000%;
+}
+
+.switchPageButton button:active {
+	background-color: #FFF;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+#gotoRegister {
+	top: 56%;
+	left: 43%;
+}
+
+#gotoLogin {
+	top: 62%;
+	left: 42.5%;
+}
+
+#backtoLogin {
+	top: 23.5%;
+	left: 33%;
+}
+
+.submitForm {
+	position: fixed;
+	z-index: 10;
+}
+
+.submitForm input {
+	background-color: transparent;
+	color: var(--button-text-col);
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: center;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.submitForm button {
+	background-color: var(--brand-col);
+	border-radius: 15px;
+	border: none;
+	margin: 0px 5px;
+	padding: 20px 30px;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.submitForm button:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+}
+
+.submitForm button:active {
+	background-color: var(--brand-col);
+	background-size: 100%;
+	transition: background 0s;
+}
+
+#loginButton {
+	top: 63%;
+	left: 46.3%;
+}
+
+#registerButton {
+	top: 67.5%;
+	left: 45.3%;
+}
+
+#requestButton {
+	top: 63%;
+	left: 45%;
+}
+
+#resetButton {
+	top: 64%;
+	left: 45.75%;
+}

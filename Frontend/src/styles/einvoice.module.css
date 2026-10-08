@@ -1,0 +1,106 @@
+.invoiceView {
+	background-color: #aaa;
+	position: fixed;
+	z-index: 0;
+	margin: 0 auto;
+	padding: 130px 30px 10px;
+	top: 110px;
+	left: 600px;
+	right: 30px;
+	bottom: 20px;
+	border-radius: 20px;
+	border: none;
+}
+
+.invoiceSubject {
+	background-color: #FFF;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	top: 130px;
+	left: 620px;
+	right: 50px;
+	position: fixed;
+	z-index: 10;
+	padding: 10px 20px;
+	margin: 0 auto;
+	border-radius: 20px;
+	border: none;
+}
+
+.invoiceDetails {
+	position: fixed;
+	z-index: 10;
+	top: 190px;
+	left: 640px;
+	display: inline-block;
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+}
+
+.invoiceMenu {
+	position: fixed;
+	z-index: 10;
+	top: 185px;
+	right: 40px;
+	display: inline-block;
+}
+
+.invoiceButton {
+	background-color: transparent;
+	color: #000000;
+	border-radius: 15px;
+	border: none;
+	font-size: 18px;
+	margin: 0px 5px;
+	padding: 10px;
+	display: inline;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+#deletePermanent {
+	color: red;
+}
+
+.invoiceButton:hover {
+	font-size: 18px;
+	background: #FFF radial-gradient(circle, transparent 1%, #FFF 1%) center/15000%;
+}
+
+.invoiceButton:active {
+	background-color: #aaa;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.invoiceRenderBackground {
+	background-color: #aaa;
+	position: fixed;
+	z-index: 0;
+	margin: 0 auto;
+	padding: 20px;
+	top: 245px;
+	left: 600px;
+	right: 30px;
+	bottom: 20px;
+	border-radius: 20px;
+	border: none;
+	overflow-y: scroll;
+}
+
+.invoiceRender {
+	background-color: #f0f0f0;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.invoiceRender h3 {
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+}

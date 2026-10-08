@@ -1,0 +1,246 @@
+/*
+Color palette: blue, green, orange, purple
+
+Font family: Helvetica for all titles and bodies
+*/
+
+/* --- main --- */
+.main {
+	font-family: Helvetica, sans-serif;
+}
+
+.homeBackground {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -10;
+	top: 0;
+	left: 0;
+	background-color: var(--background-main);
+	box-sizing: border-box;
+}
+
+/* --- Home Top Menu Bar --- */
+
+.homeTopMenu header {
+	position: fixed;
+	z-index: 10;
+	top: 10px;
+	right: 1.5%;
+	display: inline-block;
+}
+
+.homeTopMenu button {
+	background-color: transparent;
+	color: var(--text-col-main);
+	border-radius: 15px;
+	border: none;
+	font-size: 18px;
+	margin: 0px 5px;
+	padding: 5px;
+	display: inline;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.homeTopMenu button:hover {
+	font-size: 18px;
+	background: #ccc radial-gradient(circle, transparent 1%, #ccc 1%) center/15000%;
+}
+
+.homeTopMenu button:active {
+	background-color: #FFF;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+/* --- Home Side Menu --- */
+
+#receivedSideMenu,
+#createdSideMenu,
+#deletedSideMenu,
+#settingsSideMenu {
+	position: fixed;
+	height: 100%;
+	z-index: 10;
+	display: block;
+	padding-top: 30px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* Scrollable contents if viewport is shorter than content. */
+	border-right: 1px solid #eee;
+	width: 200px;
+}
+
+#receivedSideMenu {
+	background-color: #5AC4F6;
+}
+
+#createdSideMenu {
+	background-color: #00D56B;
+}
+
+#deletedSideMenu {
+	background-color: #EF8C00;
+}
+
+#settingsSideMenu {
+	background-color: #BFBFBF;
+}
+
+.homeSideMenu a {
+	text-decoration: none;
+}
+
+
+.homeSideMenu h2 {
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 100px 8px 20px 25px;
+	display: block;
+}
+
+.createButton {
+	background-color: #f0f0f0;
+	color: var(--brand-col);
+	margin: 15px 18px;
+	max-width: 160px;
+	min-width: 160px;
+	font-size: 15px;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 20px;
+	border-radius: 20px;
+	border: none;
+	transition: background 0.8s;
+}
+
+.createButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+	color: #FFF;
+}
+
+.createButton:active {
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.createButton p {
+	margin-left: 10px;
+}
+
+.navButton {
+	background-color: #f0f0f0;
+	color: #000000;
+	margin: 10px 18px;
+	max-width: 160px;
+	min-width: 160px;
+	font-size: 15px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 15px;
+	border-radius: 15px;
+	border: none;
+	transition: background 0.8s;
+}
+
+.navButton:hover {
+	background: var(--brand-anim-col) radial-gradient(circle, transparent 1%, var(--brand-anim-col) 1%) center/15000%;
+	color: #FFF;
+}
+
+.navButton:active {
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.navButton p {
+	margin-left: 10px;
+}
+
+.logo {
+	background-color: transparent;
+	position: fixed;
+	z-index: 1;
+	bottom: 30px;
+	left: 30px;
+}
+
+/* --- Page Title --- */
+
+.homePageTitle h1 {
+	color: var(--text-col-main);
+	font-family: Helvetica, sans-serif;
+	font-size: 36px;
+	top: 30px;
+	left: 250px;
+	position: fixed;
+	display: block;
+}
+
+/* --- Search Bar and List of Invoices --- */
+
+.searchBar {
+	top: 100px;
+	left: 230px;
+	position: fixed;
+}
+
+.searchBar input[type=text] {
+	background-color: #ccc;
+	color: #000000;
+	width: 330px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 0px solid #ccc;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+.listInvoices {
+	background-color: #aaa;
+	margin: 0px auto;
+	width: 330px;
+	top: 170px;
+	left: 230px;
+	bottom: 20px;
+	position: fixed;
+	border-radius: 20px;
+	overflow-y: scroll;
+}
+
+.listInvoices button {
+	background-color: #FFF;
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: left;
+	padding: 10px 20px;
+	margin: 10px 10px 0;
+	width: 290px;
+	display: block;
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.listInvoices button:hover {
+	background: #ccc radial-gradient(circle, transparent 1%, #ccc 1%) center/15000%;
+}
+
+.listInvoices button:active {
+	background-color: #FFF;
+	background-size: 100%;
+	transition: background 0s;
+}
